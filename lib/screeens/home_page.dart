@@ -1,4 +1,4 @@
-import 'package:drawer_app/data.dart';
+import 'package:drawer_app/data/drawer_data.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -43,8 +43,16 @@ class HomePage extends StatelessWidget {
                         return Column(
                           children: [
                             ListTile(
-                              leading: Icon(drawerList[index].icon),
-                              title: Text(drawerList[index].title),
+                              leading: Icon(
+                                drawerList[index].icon,
+                                color: Colors.black,
+                              ),
+                              title: Text(
+                                drawerList[index].title,
+                                style: TextStyle(
+                                  fontSize: 18,
+                                ),
+                              ),
                             ),
                           ],
                         );
@@ -57,8 +65,16 @@ class HomePage extends StatelessWidget {
                   endIndent: 20,
                 ),
                 ListTile(
-                  leading: Icon(Icons.logout),
-                  title: Text("Log out"),
+                  leading: Icon(
+                    Icons.logout,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    "Log out",
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
                 )
               ],
             ),
